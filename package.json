@@ -1,0 +1,19 @@
+{
+  "name": "movie-user-backend",
+  "version": "1.0.0",
+  "description": "yo chaii movie database ko user ko laagi ho",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Saroj: no test specified\" && exit 1",
+    "start": " node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "sanjay",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0",
+    "nodemon": "^2.0.22"
+  }
+}
