@@ -5,7 +5,7 @@ const userRoutes = require('./routes/user-routes');
 
 const server = express()
 
-mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/sgBackendClass?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://kushalbaj:12345@kushalmongoserver.prh7x0a.mongodb.net/sg-backend-class?retryWrites=true&w=majority")
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
@@ -13,13 +13,13 @@ mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/sgBack
 server.use(bodyParser.json())
 server.use('/user',userRoutes);
 
-// server.get('/kushal',function (req, res) {
-//   res.send('Hello Kushal')
-// })
-// server.get('/sanjay',function (req, res) {
-//     res.send('Hello sanjay')
+server.get('/kushal',function (req, res) {
+  res.send('Hello Kushal')
+})
+server.get('/sanjay',function (req, res) {
+    res.send('Hello sanjay')
   
-// })
+})
 
 server.post('/kushal', function (req, res) {
     // if (!req.body) {
