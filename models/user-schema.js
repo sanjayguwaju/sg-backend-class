@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true // this means that the email address must be unique
   },
   password: {
     type: String,
