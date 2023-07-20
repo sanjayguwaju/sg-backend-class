@@ -3,7 +3,7 @@ const { getAllUserController, createUserController } = require('../controllers/u
 const router = express.Router();
 
 router.get('/useraauxa', getAllUserController); // Get all users
-router.post('/usersbanxa', createUserController); // Create a new user
+router.post('/adduser', createUserController); // Create a new user
 router.delete('/usersbanxa', createUserController); // Create a new user
 router.put('/usersbanxa', createUserController); // Create a new user
 router.get('/usersname', createUserController); // Create a new user
