@@ -4,6 +4,7 @@
  * bodyparser ले हामीलाई body मा भाको data लाइ निकाल्ने काम गर्छ 
  * mongoose ले हामीलाइ schema बनाउन अनि database संग जोड्ने काम गर्छ
  */
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
@@ -26,8 +27,12 @@ server.use('/user',userRoutes);
  * येहा हामीले mongooseबाट database मा जोड्ने काम गरेका छौ मोंगूसे.
  * .connect मा दुई parameter छन्। पहिलो parameter मा हामीले जो database बनाएका छौ त्यो दिएको छ।
  */
-mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/sg-backend-class?retryWrites=true&w=majority")
-.then(() => console.log('MongoDB connected'))
+// mongoose.connect("mongodb+srv://sanjay:12345@cluster0.sa4sbyc.mongodb.net/sg-backend-class?retryWrites=true&w=majority")
+// .then(() => console.log('MongoDB connected'))
+
+mongoose.connect(process.env.MONGOURL)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error(err));
 
 
 
