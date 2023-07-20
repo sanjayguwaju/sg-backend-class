@@ -4,7 +4,6 @@
   "description": "yo chaii movie database ko user ko laagi ho",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Saroj: no test specified\" && exit 1",
     "start": " node index.js",
     "dev": "nodemon index.js"
   },
