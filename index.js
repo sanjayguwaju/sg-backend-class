@@ -12,10 +12,24 @@ const userRoutes = require('./routes/user-routes');
 
 /** 
  * येहा हामीले express server बनायेउ जसलाई हामीले server भन्ने variable मा store गरेका छौ   
- */
+ * express() is a framework for the backend which help us to create server and interact with it.
+ *
+ * What below code explains ? 
+ * ==> we are initiating our server here so from now we will call our express() as server.
+ * / 
 const server = express()
 
 // Body parser middleware should be up in the stack
+/**
+ * What is bodyParser ?
+ * ==> bodyParser is npm package which helps us to exracts the body from request and response of the api.
+ * for example:
+ *            if we are sending a GET request and getting data but our code will not know from where to get that and doing it manually 
+ *            can be cumbersome sometime so what bodyParser does is it says let me handle it for you and i will parse the contents of 
+ *            the body. It will ask you question like in what format do you want the data to be and I wil say that okay provide me 
+ *            in json format that will okay.
+ 
+ * /
 
 server.use(bodyParser.json())
 
